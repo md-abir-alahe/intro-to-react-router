@@ -7,19 +7,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import ErrorPage from './components/Error/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App></App>
+    element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>
+    
   },
   {
     path: '/about',
-    element: <div>This is the about page</div>
+    element: <About></About>
   },
   {
     path: '/contact',
-    element: <div>Contact us right now</div>
+    element: <Contact></Contact>
   }
 ])
 
